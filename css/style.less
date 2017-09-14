@@ -1,0 +1,863 @@
+/*============    ШРИФТЫ    ===========*/
+@font-face{
+	font-family: "KickHornet";
+	src:url("..//fonts/KickHornet.eot");
+	src:url("..//fonts/KickHornet.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/KickHornet.woff") format("woff"),
+		url("..//fonts/KickHornet.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "Roboto-Bold";
+	src:url("..//fonts/Roboto-Bold.eot");
+	src:url("..//fonts/Roboto-Bold.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Bold.woff") format("woff"),
+		url("..//fonts/Roboto-Bold.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Medium";
+	src:url("..//fonts/Roboto-Medium.eot");
+	src:url("..//fonts/Roboto-Medium.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Medium.woff") format("woff"),
+		url("..//fonts/Roboto-Medium.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Regular";
+	src:url("..//fonts/Roboto-Regular.eot");
+	src:url("..//fonts/Roboto-Regular.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Regular.woff") format("woff"),
+		url("..//fonts/Roboto-Regular.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Light";
+	src:url("..//fonts/Roboto-Light.eot");
+	src:url("..//fonts/Roboto-Light.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Light.woff") format("woff"),
+		url("..//fonts/Roboto-Light.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Condensed";
+	src:url("..//fonts/Roboto-Condensed.eot");
+	src:url("..//fonts/Roboto-Condensed.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Condensed.woff") format("woff"),
+		url("..//fonts/Roboto-Condensed.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*============    ГЛАВНЫЙ ЭКРАН    ===========*/
+body{
+	background-color: #f1f5f8;
+}
+
+header{
+	background-color: #112a4b;
+	width: 100%;
+	
+	z-index: 999;
+	float: left;
+	position: relative;
+	h1{
+		font-family: KickHornet;
+		color: #57bcfc;
+		margin-left: 30px;
+		span{
+			color: #fc0a0a;
+		}
+	}
+	a{
+		line-height: 69px;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-right: 20px;
+		&:hover{
+			text-decoration: none;
+		};
+	}
+}
+
+nav{
+	background-color: #fff;
+	ul{
+		margin: 0;
+		li{
+			width: 23%;
+			text-align: center;
+			a{
+				color: #8b8989;
+				text-transform: uppercase;
+				line-height: 32px;
+				font-family: Roboto-Regular;
+				text-decoration: none;
+				&:hover{
+					text-decoration: none;
+				};
+			}
+			
+		}
+		.active{
+			border-bottom: 1.2px solid #53a7dc;
+		}
+	}
+}
+
+h1.title{
+	font-size: 32px;
+	font-family: Roboto-Regular;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+p.title{
+	color: #848383;
+	font-family: Roboto-Regular;
+}
+
+.wrapper{
+	width: 960px;
+	position: relative;
+	margin: 50px auto;
+	/*border: 1px solid red;*/
+}
+	
+.Enter_Zip, .select_car, .warning, .light{
+	background-color: #fff;
+	width: 65%;
+	position: absolute;
+	padding-left: 40px;
+	border: 1px solid #e9e5e5;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	h4{
+		font-family: Roboto-Regular;
+		color: #0b0b0b;
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+	p{
+		font-size: 12px;
+		font-family: Roboto-Regular;
+		color: #869fb4;
+
+	}
+	img{
+		z-index: 10;
+		position: relative;
+		left: 10px;
+	}
+	input{
+		border: 1px solid #e0dddd;
+		height: 35px;
+		width: 250px;
+		padding-left: 35px;
+		margin-left: -20px;
+		
+	}
+	p.great{
+		padding: 5px;
+		background-color: #e0f0fe;
+		border: 1px solid #a0c8f3;
+		color: #2790ec;
+		margin-right: 30px;
+		float: right;
+		font-size: 12px;
+	}
+}
+.Enter_Zip{
+	p.great{
+		display: none;
+	}
+	button.confirm_zip{
+		display: none;
+		font-family: Roboto-Bold;
+		font-size: 14px;
+		background-color: #218be7;
+		color: #fff;
+		border: none;
+		border-radius: 30px;
+		padding: 10px 40px;
+		margin-top: 30px;
+	}
+}
+
+
+.select_car{
+	top: 250px;
+	display: none;
+	select{
+		margin-top: 20px;
+		display: block;
+		width: 93%;
+		height: 35px;
+		border: 1px solid #e0dddd;
+		padding-left: 10px;
+	}
+}
+
+.warning{
+	display: none;
+	top: 420px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	.top_line{
+		border-bottom: 1px solid #e0dddd;
+		width: 93%;
+		height: 40px;
+		margin-bottom: 20px;
+		p{
+			right: 40px;
+			display: block;
+			position: absolute;
+			text-transform: uppercase;
+			top: 15px;
+			&:after{
+				content:'';
+				width: 24px;
+				height: 26px;
+				display: inline-block;
+				background-image: url('../img/delate_ico.png');
+				margin-left: 10px;
+			};
+		}
+	}
+	p{
+		color: #7a7a7a;
+	}
+}
+
+.big_light{
+	display: none;
+	/*border: 1px solid red;*/
+	border-left: 1px solid #e0dddd;
+	height: 600px;
+	/*height: 100%;*/
+	top: 539px;
+	width: 60%;
+	position: relative;
+	margin-left: 5%;
+	.circle{
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #e0dddd;
+		position: absolute;
+		left: -8px;
+		top: 80px;
+	}
+	.abs_help, .Appointment_brake_pads, .Appointment_brake, .Appointment_coolant, .Appointment_engine_oil, .Appointment_engine_soon, .Appointment_Oil_Change, .Appointment_parking_brake, .Appointment_Security, .Appointment_steering, .Appointment_Temp, .Appointment_Throttle, .Appointment_traction, .chech, .Appointment_airbag_system, .Appointment_Beam_Light, .Appointment_car_is_open, .Appointment_catalytic_converte, .Appointment_Defrost, .Appointment_exterior_lights, .Appointment_fog_lights, .Appointment_gas_cap, .Appointment_Overdrive, .Appointment_Reduced_Power, .Appointment_seat_belt, .Appointment_Transmission_Temperature, .Appointment_Washer_fluid, .ALT, .indicator_light, .Tire{
+		display: none;
+		text-align: center;
+		background-color: #fff;
+		position: absolute;
+		width: 95%;
+		right: 0; 
+		top: 610px;
+		border: 1px solid #e9e5e5;
+		border-radius: 4px;
+		margin-bottom: 100px;
+		padding: 20px;
+		padding-left: 30px;
+		h3{
+			font-family: Roboto-Regular;
+			font-size: 17px;
+			color: #0b0b0b;
+			text-align: left;
+		}
+		p,ul{
+			color: #7e7e7e;
+			font-family: Roboto-Regular;
+			font-size: 13px;
+			text-align: left;
+		}
+		ul{
+			margin-left: -20px;
+		}
+		p.recommended{
+			&:before{
+				content:'';
+				width: 18px;
+				height: 14px;
+				display: inline-block;
+				background-image: url('../img/abs_ico_ok.png');
+				margin-right: 10px;
+			};
+		}
+		button{
+			color: #68686a;
+			padding: 10px 30px;
+			text-align: center;
+			border: 1px solid #c1c1c1;
+			border-radius: 30px;
+			background-color: transparent;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			font-family: Roboto-Bold;
+			&:hover{
+				border: 1px solid #919191;
+			};
+		}
+	}
+	/*.chech{
+		display: block;
+	}*/
+}
+.light{
+	/*top: 530px;*/
+	/*width: 55%;*/
+	top: 25px;
+	width: 95%;
+	right: 0;
+	margin-left: 10%;
+	margin-bottom: 30px;
+	-webkit-transition: all ease-out 0.3s;
+     -moz-transition: all ease-out 0.3s;
+     -o-transition: all ease-out 0.3s;
+     transition: all ease-out 0.3s;
+     h4{
+     	margin-bottom: 30px;
+     	font-size: 17px;
+     	font-family: Roboto-Regular;
+     }
+	.checkeng_11, .checkeng_2, .checkeng_33, .maintreq_11, .maintreq_22, .throttle_22, .brakewarn_11, .brakewarn_22, .brakewarn_33, .brakepad_11, .servicesoon_11, .charge_1, .charge_2, .charge_33, .charge_44, .abs_11, .abs_22, .temp_11, .lowcoolant_11, .lowcoolant_22, .lowcoolant_33, .lowoil_11, .throttle_11, .parkbrake_11, .traction_11, .traction_22, .traction_33, .traction_44, .powersteering_11, .security_11, .security_22, .tire_11, .cruise_11, .cruise_22, .od_11, .seatbelt_11, .catalytic_11, .transmissiontemp_11, .srs_11, .rearwindefrost_11, .foglight_11, .highbeam_11, .reducedpower_11, .gascap_111, .lampout_11, .dooropen_11, .washerfluid_11{
+		display: inline-block;
+		width: 51px;
+		height: 50px;
+		margin: 5px;
+		margin-left: 10px;
+	}
+
+	.checkeng_11{
+		background-image: url('../img/gray/checkeng_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/checkeng_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.checkeng_2{
+		background-image: url('../img/gray/checkeng_2 (1)1.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/checkeng_2.png');
+			cursor: pointer;
+		};
+	}
+
+	.checkeng_33{
+		background-image: url('../img/gray/checkeng_33.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/checkeng_3.png');
+			cursor: pointer;
+		};
+	}
+
+	.maintreq_11{
+		background-image: url('../img/gray/maintreq_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/maintreq_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.maintreq_22{
+		background-image: url('../img/gray/maintreq_22.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/maintreq_2.png');
+			cursor: pointer;
+		};
+	}
+
+	.throttle_22{
+		background-image: url('../img/gray/throttle_22.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/throttle_2.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.brakewarn_11{
+		background-image: url('../img/gray/brakewarn_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/brakewarn_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.brakewarn_22{
+		background-image: url('../img/gray/brakewarn_22.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/brakewarn_2.png');
+			cursor: pointer;
+		};
+	}
+
+	.brakewarn_33{
+		background-image: url('../img/gray/brakewarn_33.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/brakewarn_3.png');
+			cursor: pointer;
+		};
+	}
+
+	.brakepad_11{
+		background-image: url('../img/gray/brakepad_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/brakepad_1.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.servicesoon_11{
+		background-image: url('../img/gray/servicesoon_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/servicesoon_1.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.charge_1{
+		background-image: url('../img/gray/charge_1 (1)1.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/charge_1 (1).png');
+			cursor: pointer;
+		};
+	}
+
+
+	.charge_2{
+		background-image: url('../img/gray/charge_2.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/charge_2.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.charge_33{
+		background-image: url('../img/gray/charge_33.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/charge_3.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.charge_44{
+		background-image: url('../img/gray/charge_44.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/charge_4.png');
+			cursor: pointer;
+		};
+	}
+
+	.abs_11{
+		background-image: url('../img/gray/abs_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/abs_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.abs_22{
+		background-image: url('../img/gray/abs_22.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/abs_2.png');
+			cursor: pointer;
+		};
+	}
+
+	.temp_11{
+		background-image: url('../img/gray/temp_11.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/temp_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.lowcoolant_11{
+		background-image: url('../img/gray/lowcoolant_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/lowcoolant_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.lowcoolant_22{
+		background-image: url('../img/gray/lowcoolant_22.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/lowcoolant_2.png');
+			cursor: pointer;
+		};
+	}
+
+	.lowcoolant_33{
+		background-image: url('../img/gray/lowcoolant_33.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/lowcoolant_3.png');
+			cursor: pointer;
+		};
+	}
+
+	.lowoil_11{
+		background-image: url('../img/gray/lowoil_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/lowoil_1.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.throttle_11{
+		background-image: url('../img/gray/throttle_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/throttle_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.parkbrake_11{
+		background-image: url('../img/gray/parkbrake_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/parkbrake_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.traction_11{
+		background-image: url('../img/gray/traction_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/traction_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.traction_22{
+		background-image: url('../img/gray/traction_22.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/traction_2.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.traction_33{
+		background-image: url('../img/gray/traction_33.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/traction_3.png');
+			cursor: pointer;
+		};
+	}
+
+	.traction_44{
+		background-image: url('../img/gray/traction_44.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/traction_4.png');
+			cursor: pointer;
+		};
+	}
+
+	.powersteering_11{
+		background-image: url('../img/gray/powersteering_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/powersteering_1.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.security_11{
+		background-image: url('../img/gray/security_11.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url('../img/red/security_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.security_22{
+		background-image: url('../img/gray/security_22.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/security_2.png');
+			cursor: pointer;
+		};
+	}
+
+
+	.tire_11{
+		background-image: url('../img/gray/tire_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/tire_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.cruise_11{
+		background-image: url('../img/gray/cruise_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/cruise_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.cruise_22{
+		background-image: url('../img/gray/cruise_22.png');
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&:hover{
+			background-image: url('../img/red/cruise_2.png');
+			cursor: pointer;
+		};
+	}
+
+	.od_11{
+		background-image: url('../img/gray/od_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/od_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.seatbelt_11{
+		background-image: url('../img/gray/seatbelt_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/seatbelt_1.png');
+			cursor: pointer;
+		};
+	}
+	
+	.catalytic_11{
+		background-image: url('../img/gray/catalytic_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/catalytic_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.transmissiontemp_11{
+		background-image: url('../img/gray/transmissiontemp_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/transmissiontemp_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.srs_11{
+		background-image: url('../img/gray/srs_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/srs_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.rearwindefrost_11{
+		background-image: url('../img/gray/rearwindefrost_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/rearwindefrost_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.foglight_11{
+		background-image: url('../img/gray/foglight_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/foglight_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.highbeam_11{
+		background-image: url('../img/gray/highbeam_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/highbeam_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.reducedpower_11{
+		background-image: url('../img/gray/reducedpower_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/reducedpower_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.gascap_111{
+		background-image: url('../img/gray/gascap_111.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/gascap_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.lampout_11{
+		background-image: url('../img/gray/lampout_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/lampout_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.dooropen_11{
+		background-image: url('../img/gray/dooropen_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/dooropen_1.png');
+			cursor: pointer;
+		};
+	}
+
+	.washerfluid_11{
+		background-image: url('../img/gray/washerfluid_11.png');
+		background-repeat: no-repeat;
+		&:hover{
+			background-image: url('../img/red/washerfluid_1.png');
+			cursor: pointer;
+		};
+	}
+
+
+
+	&:hover{
+		box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
+	};
+}
+
+.user_price{
+	/*position: fixed;*/
+	position: absolute;
+	
+	right: 0;
+	top: 0;
+	width: 31%;
+	height: 400px;
+	z-index: 100;
+	border-radius: 4px;
+	.top_line{
+		background-color: #218be7;
+		color: #fff;
+		padding-top: 15px;
+		padding-left: 20px;
+		border-radius: 4px 4px 0 0;
+		height: 80px;
+		h4{
+			margin: 0;
+			font-family: Roboto-Medium;
+			font-size: 15px;
+		}
+		h3{
+			font-family: Roboto-Medium;
+			font-size: 27px;
+			margin-top: 5px;
+			float: left;
+			margin-right: 35px;
+		}
+		p{
+			font-family: Roboto-Regular;
+			font-size: 13px;
+			margin-top: 15px;
+		}
+	}
+	.body_line{
+		background-color: #fff;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		border-radius: 0 0 4px 4px;
+		span{
+			color: #1f2632;
+			font-family: Roboto-Medium;
+			font-size: 21px;
+		}
+		p{
+			color: #898888;
+			font-size: 13px;
+			font-family: Roboto-Regular;
+			margin-top: 20px;
+		}
+	}
+	.footer_line{
+		background-color: #f1f5f8;
+		border: 1.1px solid #e9e5e5;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		border-radius: 4px;
+		a{
+			color: #898888;
+			font-family: Roboto-Regular;
+			font-size: 13px;
+		}
+	}
+	
+}
+
+
+
