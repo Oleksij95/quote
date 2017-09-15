@@ -69,7 +69,7 @@ header{
 	
 	z-index: 999;
 	float: left;
-	position: relative;
+	position: fixed;
 	h1{
 		font-family: KickHornet;
 		color: #57bcfc;
@@ -92,6 +92,10 @@ header{
 
 nav{
 	background-color: #fff;
+	position: fixed;
+	top: 68px;
+	width: 100%;
+	z-index: 9999;
 	ul{
 		margin: 0;
 		li{
@@ -110,7 +114,8 @@ nav{
 			
 		}
 		.active{
-			border-bottom: 1.2px solid #53a7dc;
+			border-bottom: 2px solid #53a7dc;
+
 		}
 	}
 }
@@ -118,16 +123,18 @@ nav{
 h1.title{
 	font-size: 32px;
 	font-family: Roboto-Regular;
-	margin-top: 50px;
+	margin-top: 150px;
 	margin-bottom: 10px;
 }
 p.title{
 	color: #848383;
 	font-family: Roboto-Regular;
-}
+} 
 
 .wrapper{
 	width: 960px;
+	/*width: 1100px;*/
+	/*height: 500px;*/
 	position: relative;
 	margin: 50px auto;
 	/*border: 1px solid red;*/
@@ -142,6 +149,13 @@ p.title{
 	border-radius: 4px;
 	padding-top: 10px;
 	padding-bottom: 30px;
+	-webkit-transition: all ease-out 0.3s;
+     -moz-transition: all ease-out 0.3s;
+     -o-transition: all ease-out 0.3s;
+     transition: all ease-out 0.3s;
+     &:hover{
+		box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
+	};
 	h4{
 		font-family: Roboto-Regular;
 		color: #0b0b0b;
@@ -243,8 +257,8 @@ p.title{
 	display: none;
 	/*border: 1px solid red;*/
 	border-left: 1px solid #e0dddd;
-	height: 600px;
-	/*height: 100%;*/
+	height: 100%;
+	min-height: 550px;
 	top: 539px;
 	width: 60%;
 	position: relative;
@@ -258,19 +272,47 @@ p.title{
 		left: -8px;
 		top: 80px;
 	}
-	.abs_help, .Appointment_brake_pads, .Appointment_brake, .Appointment_coolant, .Appointment_engine_oil, .Appointment_engine_soon, .Appointment_Oil_Change, .Appointment_parking_brake, .Appointment_Security, .Appointment_steering, .Appointment_Temp, .Appointment_Throttle, .Appointment_traction, .chech, .Appointment_airbag_system, .Appointment_Beam_Light, .Appointment_car_is_open, .Appointment_catalytic_converte, .Appointment_Defrost, .Appointment_exterior_lights, .Appointment_fog_lights, .Appointment_gas_cap, .Appointment_Overdrive, .Appointment_Reduced_Power, .Appointment_seat_belt, .Appointment_Transmission_Temperature, .Appointment_Washer_fluid, .ALT, .indicator_light, .Tire{
+
+}
+
+.big_light2{
+	display: none;
+	border-left: 1px solid #e0dddd;
+	height: 100%;
+	/*min-height: 550px;*/
+	top: 530px;
+	width: 60%;
+	position: relative;
+	margin-left: 5%;
+	.circle2{
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #e0dddd;
+		position: absolute;
+		left: -8px;
+		top: 130px;
+	}
+		.abs_help, .Appointment_brake_pads, .Appointment_brake, .Appointment_coolant, .Appointment_engine_oil, .Appointment_engine_soon, .Appointment_Oil_Change, .Appointment_parking_brake, .Appointment_Security, .Appointment_steering, .Appointment_Temp, .Appointment_Throttle, .Appointment_traction, .chech, .Appointment_airbag_system, .Appointment_Beam_Light, .Appointment_car_is_open, .Appointment_catalytic_converte, .Appointment_Defrost, .Appointment_exterior_lights, .Appointment_fog_lights, .Appointment_gas_cap, .Appointment_Overdrive, .Appointment_Reduced_Power, .Appointment_seat_belt, .Appointment_Transmission_Temperature, .Appointment_Washer_fluid, .ALT, .indicator_light, .Tire{
 		display: none;
 		text-align: center;
 		background-color: #fff;
 		position: absolute;
 		width: 95%;
 		right: 0; 
-		top: 610px;
+		top: 70px;
 		border: 1px solid #e9e5e5;
 		border-radius: 4px;
 		margin-bottom: 100px;
 		padding: 20px;
 		padding-left: 30px;
+		-webkit-transition: all ease-out 0.3s;
+     -moz-transition: all ease-out 0.3s;
+     -o-transition: all ease-out 0.3s;
+     transition: all ease-out 0.3s;
+     &:hover{
+		box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
+	};
 		h3{
 			font-family: Roboto-Regular;
 			font-size: 17px;
@@ -311,10 +353,9 @@ p.title{
 			};
 		}
 	}
-	/*.chech{
-		display: block;
-	}*/
 }
+
+
 .light{
 	/*top: 530px;*/
 	/*width: 55%;*/
@@ -790,14 +831,25 @@ p.title{
 	};
 }
 
-.user_price{
+
+.user_price, .user_select_price{
 	/*position: fixed;*/
 	position: absolute;
-	
+	display: none;
 	right: 0;
 	top: 0;
-	width: 31%;
+
+
+	
+
+
+
+	margin-top: 0px;
+	/*margin-left: 650px;*/
+	width: 30%;
+	max-width: 326px;
 	height: 400px;
+
 	z-index: 100;
 	border-radius: 4px;
 	.top_line{
@@ -842,6 +894,17 @@ p.title{
 			font-family: Roboto-Regular;
 			margin-top: 20px;
 		}
+		p.location_user, p.cars_user{
+			margin: 0;
+			padding: 0;
+			&:hover{
+				text-decoration: underline;
+				cursor: pointer;
+			};
+		}
+		p.location_user{
+			margin-top: 15px;
+		}
 	}
 	.footer_line{
 		background-color: #f1f5f8;
@@ -857,6 +920,205 @@ p.title{
 		}
 	}
 	
+}
+.user_price{
+	display: block;
+}
+.user_select_price{
+	display: none;
+	.top_line{
+		height: 160px;
+		h3{
+			float: none;
+			margin-bottom: 0;
+		}
+		p{
+			margin-left: 0;
+			margin-top: 0;
+		}
+		table{
+			/*margin-top: 12px;*/
+			display: block;
+			position: absolute;
+			right: 10px;
+			top: 12px;
+			tr{
+				td{
+					width: 100px;
+					line-height: 24px;
+				}
+			}
+		}
+		hr{
+			width: 80%;
+			margin-right: 40px;
+			border-top: 1px solid blue;
+		}
+		a.view_price{
+			color: #1c3a93;
+		}
+	}
+	.body_line{
+		p.PServices{
+			float: left;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		hr{
+			width: 67%;
+			margin-right: 40px;
+		}
+		.chkbody{
+			background-color: #0a35b6;
+			width: 45px;
+			height: 20px;
+			border-radius: 20px;
+			position: relative;
+			&:hover{
+				cursor: pointer;
+			};
+			.chrcircle{
+				position: absolute;
+				width: 20px;
+				height: 18.5px;
+				border-radius: 50%;
+				background-color: #fff;
+				margin-top: 1px;
+				right: 1px;
+			}
+		}
+		a.Inspect{
+			
+			font-size: 12px;
+			margin-top: -20px;
+			margin-right: 10px;
+			margin-left: 50px;
+			float: left;
+		}
+		img.delateImg{
+			float: right;
+			margin-top: -25px;
+			margin-right: 10px;
+			&:hover{
+				cursor:pointer;
+			};
+		}
+		p.Inspect{
+			margin-top: 10px;
+		}
+		table.incl{
+			margin-bottom: 20px;
+			tr{
+				margin-top: 10px;
+				margin-bottom: 30px;
+				td{
+					width: 50px;
+					/*padding: 5px;*/
+					color: #fff;
+					background-color: green;
+					border-radius: 4px;
+					font-size: 12px;
+					text-align: center;
+				}
+				th{
+					width: 200px;
+					padding-left: 10px;
+				}
+			}
+			tr.show{
+				padding: 0;
+				margin: 0;
+				margin-bottom: 10px;
+			}
+		}
+		a.AddMore{
+			margin-top: 60px;
+		}
+	}
+	 
+}
+
+
+.fix{
+	position: fixed;
+	margin-left: 672px;
+	/*width: 18.9%;*/
+	width: 30%;
+	max-width: 290px;
+	right: auto;
+	top: 15%;
+	/*margin-top: -150px;*/
+}
+
+
+footer{
+	background-color: #ffffff;
+	border-top: 1px solid #d2d0d0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	position: relative;
+	top: 700px;
+	.SERVICE,.INFO{
+		border-right: 1px solid #b2b2b2;
+	}
+	.SERVICE{
+		padding-right: 50px;
+	}
+	.INFO{
+		padding-bottom: 5px;
+	}
+	.soc{
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		background-color: #b2b2b2;
+		border-radius: 50%;
+		text-align: center;
+		margin-top: 30px;
+		i{
+			line-height: 27px;
+			color: #fff;
+		}
+		&:hover{
+			background-color: #8e8d8d;
+		};
+	}
+	h4{
+		font-size: 12px;
+		color: #201f1f;
+		font-family: Roboto-Medium;
+	}
+	h4.PARTNERS{
+		display: block;
+		margin-top: -10px;
+	}
+	p{
+		color: #979696;
+		font-size: 14px;
+		font-family: Roboto-Regular;
+	}
+	p.ITColors{
+		display: block;
+		margin-top: 37%;
+		margin-left: 40px;
+	}
+	ul{
+		float: left;
+		list-style: none;
+		li{
+			a{
+				color: #979696;
+				font-size: 12px;
+				text-decoration: none;
+				&:hover{
+					text-decoration: none;
+				};
+			}
+		}
+	}
+	UL.CATEGORIES{
+		margin-right: 30px;
+	}
 }
 
 
